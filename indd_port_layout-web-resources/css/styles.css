@@ -145,9 +145,6 @@ p.scroll-text {
   align-self: center;
   transition-delay: -.5s;
 }
-/* .thumbnail-img:hover {
-  opacity: .8;
-} */
 .thumbnail img {
 	max-width: 400px;
   margin: 25vh 0 0;
@@ -192,6 +189,7 @@ p.scroll-text {
   overflow-x: hidden;
   position: fixed;
   width: 0;
+  height: 200vh;
   background-color: #111;
   transition: 1s;
 }

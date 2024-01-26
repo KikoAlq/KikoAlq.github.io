@@ -49,17 +49,14 @@ function viewillusSec() {
 const pageFlip = new St.PageFlip(document.getElementById('book'), 
     {
         width: 1100, // required parameter - base page width
-        height: 600,  // required parameter - base page height
+        height: 1000,  // required parameter - base page height
         showCover: true,
-        size:("stretch")
+        size:("stretch"),
+        usePortrait: false
     }
 );
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
-
-// pageFlip.loadFromImages(
-//   add images
-// );
 
 const pageFlips = new St.PageFlip(document.getElementById('book2'), 
     {
