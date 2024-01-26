@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* Kiko's Port Website */
+/* -global */
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-size: 10px;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+body {
+	font-family:"Helvetiva", sans-serif;
+	
+	color: white;
+}
+p {
+	margin: 0;
+}
+a:visited {
+	color: none;
+}
+
+/* -Main -Top of Page */
+
+.frontpage {
+	background-image: url("../../imgs/koisized.png"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper {
+	flex: 1 0 auto;
+  transition: .5s;
+  background: none;
+}
+.top-wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.top-wrapper .title {
+	flex: 1 0 auto;
+}
+
+/* -navbar */
+
+.burger-bar img {
+	position: fixed;
+	max-height: 60px;
+	margin: 60px 20px;
+}
+.navbar {
+  overflow-x: hidden;
+	position: fixed;
+	height: 100vh;
+	width: 0;
+	background-color: #111;
+	font-size: 2rem;
+	line-height:1.5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: .5s;
+}
+.navbtn {
+	color: white;
+	font-family: "Gotham", 'Helvetica Neue', "Helvetica", "Arial", 'sans-serif';
+	margin-top: 20px;
+	line-height: 2;
+	text-decoration: none;
+}
+.navbtn:hover {
+	color: mediumaquamarine;
+}
+.closebtn {
+	font-size: 5rem;
+}
+.closebtn:hover {
+	color: mediumaquamarine;
+}
+
+/* -title section */
+
+div.title {
+	margin: 0 50px 0;
+	padding: 100px 0px 0px;
+	color: mediumaquamarine;
+	font-family: 'Koulen', sans-serif;
+}
+p.title-main, p.title-bottom, p.scroll-text {
+	text-align:center;
+	text-align-last:center;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-decoration:none;
+}
+p.title-main {
+	font-size: 20rem;
+	line-height:0.817;
+	letter-spacing: -.03em;
+}
+p.title-bottom {
+	font-size: 4.5rem;
+	line-height: 1.2em;
+}
+.scroll {
+	color: mediumaquamarine;
+	font-family: 'Koulen', sans-serif;
+	margin: 5vh 0 10vh;
+  font-size: 4rem;
+  transition: .5s;
+}
+.scroll:hover {
+  font-size: 5rem;
+  opacity: .8;
+}
+p.scroll-text {
+	line-height: 1.2em;
+}
+.scroll-arrow {
+	display: block;
+	margin: 0 auto 0;
+	width: 20px;
+}
+
+/* -portfolio section */
+
+.port-grid {
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-auto-rows: 100vh;
+  width: auto;
+	margin: 0 100px 0;
+	grid-column-gap: 200px;
+	grid-row-gap: 50px;
+	font-size: 1.6rem;
+	line-height: 1.3;
+}
+.thumbnail {
+  transition: .5s;
+  align-self: center;
+  transition-delay: -.5s;
+}
+/* .thumbnail-img:hover {
+  opacity: .8;
+} */
+.thumbnail img {
+	max-width: 400px;
+  margin: 25vh 0 0;
+	box-shadow: 5px 5px 25px 5px black;
+}
+.overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s;
+}
+.thumbnail:hover .overlay{
+  opacity: 1;
+}
+.port-details{
+  display: inline;
+  align-self: stretch;
+  margin: 25vh 0 25vh;
+}
+.port-details p {
+	font-size: 2rem;
+}
+.port-details h3 {
+  margin: 0;
+	font-size: 4rem;
+	line-height: 1;
+}
+.small-detail {
+  padding-top: 130px;
+}
+
+/* -preview section */
+
+.previewSec {
+  right: 0%;
+  overflow: hidden;
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  background-color: #111;
+  transition: 1s;
+}
+#closePreview {
+  margin: 60px 40px;
+}
+
+/* -footer */
+footer {
+  flex-shrink: 0;
+	margin: 25vh 50px 0;
+	padding: 0 50px 5px;
+	height: 20px;
+	font-size: 12px;
+	line-height: .05;
+}
+footer p {
+	display: inline;
+}
+.attr-foot {
+	float: right;
+}
+/* -media queries */
+/*
+breakpoints:
+
+title 
+	800px tablet size 8.2em
+	500px mobile size ~2em
+
+port section
+	1100px mobile stacked structure
+		responsive thumbnail size
+*/
