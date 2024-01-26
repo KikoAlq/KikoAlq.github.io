@@ -51,13 +51,7 @@ const pageFlip = new St.PageFlip(document.getElementById('book'),
         width: 1100, // required parameter - base page width
         height: 600,  // required parameter - base page height
         showCover: true,
-        size:("stretch"),
-        minWidth: 600,
-        maxWidth: 1100,
-        minHeight: 300,
-        maxHeight: 800,
-        usePortrait: false
-
+        size:("stretch")
     }
 );
 
