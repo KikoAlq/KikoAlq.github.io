@@ -57,6 +57,10 @@ const pageFlip = new St.PageFlip(document.getElementById('book'),
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
+// pageFlip.loadFromImages(
+//   add images
+// );
+
 const pageFlips = new St.PageFlip(document.getElementById('book2'), 
     {
         width: 1100, // required parameter - base page width
