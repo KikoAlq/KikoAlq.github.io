@@ -1,6 +1,5 @@
 let topSec = document.getElementById("topSec")
 let internSec = document.getElementById("internSec")
-let internSecimg = document.getElementById("internSecimg")
 let printSec = document.getElementById("printSec")
 let posterSec = document.getElementById("posterSec")
 let illusSec = document.getElementById("illusSec")
@@ -25,7 +24,6 @@ function preview() {
 }
 
 function closePreview() {
-  // document.getElementById("wrapper").style.background = "none"
   document.getElementById("previewSec").style.width = "0"
   document.getElementById("closeBtn").style.opacity = "100%"
   
@@ -47,6 +45,40 @@ function viewillusSec() {
   illusSec.scrollIntoView()
 }
 
+
+const pageFlip = new St.PageFlip(document.getElementById('book'), 
+    {
+        width: 1100, // required parameter - base page width
+        height: 600,  // required parameter - base page height
+        showCover: true,
+        size:("stretch"),
+        minWidth: 600,
+        maxWidth: 1100,
+        minHeight: 300,
+        maxHeight: 800,
+        usePortrait: false
+
+    }
+);
+
+pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+
+const pageFlips = new St.PageFlip(document.getElementById('book2'), 
+    {
+        width: 1100, // required parameter - base page width
+        height: 600,  // required parameter - base page height
+        showCover: true,
+        size:("stretch"),
+        minWidth: 600,
+        maxWidth: 1100,
+        minHeight: 300,
+        maxHeight: 800,
+        usePortrait: false
+
+    }
+);
+
+pageFlips.loadFromHTML(document.querySelectorAll('.my-pages'));
 // media selector to make mobile ui dissappear
 // function viewTop() {
 //   topSec.scrollIntoView()

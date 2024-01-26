@@ -4,7 +4,11 @@
 		<meta charset="utf-8"/>
 		<title>Kiko Alquiros' Portfolio</title>
     <script src="js\script.js" defer></script>
-		<link rel="icon" type="image/x-icon" href="imgs/favicon/BIGRPS_Bot.gif">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="node_modules\page-flip\dist\js\page-flip.browser.js"></script>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon/BIGRPS_Bot.gif">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
@@ -16,82 +20,121 @@
 			<img onclick="openNav()" src="imgs/hamburg menu.png" alt="navigate"/>
 		</div>
 		
-			<div id="sidenav" class="navbar">
-				<div id="closeBtn" class="closebtn" onClick="closeNav()">&times;</div>
-				<a class="navbtn" onclick="viewTop()">top</a>
-				<a class="navbtn" onclick="viewinternSec()">internship</a>
-				<a class="navbtn" onclick="viewprintSec()">print</a>
-				<a class="navbtn" onclick="viewposterSec()">posters</a>
-        <a class="navbtn" onclick="viewillusSec()">illustration</a>
-        <a class="navbtn">resume</a>	
-				<a id="linkedinLink" href="http://www.linkedin.com/in/kiko-alquiros/" class="navbtn">linkedin</a>
-			</div>
+		<div id="sidenav" class="navbar">
+			<div id="closeBtn" class="closebtn" onClick="closeNav()">&times;</div>
+			<a class="navbtn" onclick="viewTop()">top</a>
+			<a class="navbtn" onclick="viewinternSec()">internship</a>
+			<a class="navbtn" onclick="viewprintSec()">print</a>
+			<a class="navbtn" onclick="viewposterSec()">posters</a>
+			<a class="navbtn" onclick="viewillusSec()">illustration</a>
+			<a class="navbtn">resume</a>	
+			<a id="linkedinLink" href="http://www.linkedin.com/in/kiko-alquiros/" class="navbtn">linkedin</a>
+		</div>
       
-      <div id="previewSec" class="previewSec"> 
-        <div id="closePreview" class="closebtn" onClick="closePreview()">&times;</div>
+    <div id="previewSec" class="previewSec"> 
+      <div id="closePreview" class="closebtn" onClick="closePreview()">&times;</div>
+      <div id="book" class="exampleBook">
+        <div class="my-page" data-density="hard">
+            Page Cover
+        </div>
+        <div class="my-page">
+            Page one
+        </div>
+        <div class="my-page">
+            Page two
+        </div>
+        <div class="my-page">
+            Page three
+        </div>
+        <div class="my-page">
+            Page four
+        </div>
+        <div class="my-page" data-density="hard">
+            Last page
+        </div>
       </div>
+
+      <div id="book2" class="exampleBook">
+        <div class="my-pages" data-density="hard">
+            Cover
+        </div>
+        <div class="my-pages">
+            one
+        </div>
+        <div class="my-pages">
+            two
+        </div>
+        <div class="my-pages">
+            three
+        </div>
+        <div class="my-pages">
+            four
+        </div>
+        <div class="my-pages" data-density="hard">
+            page
+        </div>
+      </div>
+    </div>
 		
-			<div id="wrapper" class="wrapper" style="background: none;">
-				<div id="topSec" class="top-wrapper">
-					<div class="title">
-						<p class="title-main">KIKO ALQUIROS</p>
-						<p class="title-bottom">designer_ illustrator_ front-end developer</p>
-					</div>
-					<div class="scroll">
-					<p class="scroll-text" onclick="viewinternSec()">see more</p>
-						<img src="imgs/scroll down arrow.png" alt="\/" class="scroll-arrow"/>
-					</div>
-				</div>
-				
-				<div id="portGrid" class="port-grid">
+    <div id="wrapper" class="wrapper" style="background: none;">
+      <div id="topSec" class="top-wrapper">
+        <div class="title">
+          <p class="title-main">KIKO ALQUIROS</p>
+          <p class="title-bottom">designer_ illustrator_ front-end developer</p>
+        </div>
 
-					<div id="internSec" class="thumbnail" onclick="preview()">
-						<img id="internSecimg" class="thumbnail-img" src="imgs/Potsdam Campus Life/Thumbnail Potsdam.png" alt="oops"/>
-            <div class="overlay">projects</div>					
-          </div>
-					<div id="details" class="port-details small-detail">
-						<h3 class="header">SUNY Potsdam Campus Life / Internship</h3>
-						<p>description</p>
-					</div>
-					
-					<div id="printSec" class="thumbnail" onclick="preview()">
-						<img src="imgs/coastal rebrand/Coastal Rebrand Thumbnail-1000px.png" alt="oops"/>
-            <div class="overlay">projects</div>
-          </div>
-					<div id="details" class="port-details small-detail">
-						<h3 class="header">Print Media</h3>
-						<p>description</p>
-					</div>
-					
-					<div id="posterSec" class="thumbnail" onclick="preview()">
-						<img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
-            <div class="overlay">projects</div>
-          </div>
-					<div id="details" class="port-details">
-						<h3 class="header">Posters</h3>
-						<p>description</p>
-					</div>
-
-          <div id="illusSec" class="thumbnail" onclick="preview()">
-						<img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
-            <div class="overlay">projects</div>
-          </div>
-					<div id="details" class="port-details">
-						<h3 class="header">Illustration</h3>
-						<p>description</p>
-					</div>
-					
-				</div>
-
-        
-        
-        
-        <footer>
-          <h2>you've reached the end!</h2>
-          <p class="contact-foot">contact me</p>
-          <p class="attr-foot">kiko alquiros 2024	&copy;</p>
-        </footer>
+        <div class="scroll">
+        <p class="scroll-text" onclick="viewinternSec()">see more</p>
+          <img src="imgs/scroll down arrow.png" alt="\/" class="scroll-arrow"/>
+        </div>
       </div>
+      
+      <div id="portGrid" class="port-grid">
+
+        <div id="internSec" class="thumbnail" onclick="preview()">
+          <img id="internSecimg" class="thumbnail-img" src="imgs/Potsdam Campus Life/Thumbnail Potsdam.png" alt="oops"/>
+          <div class="overlay">projects</div>					
+        </div>
+        <div id="details" class="port-details small-detail">
+          <h3 class="header">SUNY Potsdam Campus Life / Internship</h3>
+          <p>description</p>
+        </div>
+        
+        <div id="printSec" class="thumbnail" onclick="preview()">
+          <img src="imgs/coastal rebrand/Coastal Rebrand Thumbnail-1000px.png" alt="oops"/>
+          <div class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details small-detail">
+          <h3 class="header">Print Media</h3>
+          <p>description</p>
+        </div>
+        
+        <div id="posterSec" class="thumbnail" onclick="preview()">
+          <img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
+          <div class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details">
+          <h3 class="header">Posters</h3>
+          <p>description</p>
+        </div>
+
+        <div id="illusSec" class="thumbnail" onclick="preview()">
+          <img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
+          <div class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details">
+          <h3 class="header">Illustration</h3>
+          <p>description</p>
+        </div>
+        
+      </div>
+
+      <footer>
+        <h2>you've reached the end!</h2>
+        <p class="contact-foot">contact me</p>
+        <p class="attr-foot">kiko alquiros 2024	&copy;</p>
+      </footer>
+    </div>
 		
 	</body>
 </html>
