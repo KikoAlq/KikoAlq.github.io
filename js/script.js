@@ -13,21 +13,13 @@ function closeNav() {
   document.getElementById("sidenav").style.width = "0"
   document.getElementById("wrapper").style.marginLeft = "0"
 }
-// media selector to make mobile ui overlay not push
 
-function preview() {
-  // document.getElementById("wrapper").style.backgroundColor = "rgba(0, 0, 0, .7)"
-  document.getElementById("previewSec").style.width = "90vw"
-  document.getElementById("sidenav").style.width = "10vw"
-  document.getElementById("closeBtn").style.opacity = "0"
-  document.getElementById("wrapper").style.marginLeft = "10vw"
-}
-
-function closePreview() {
-  document.getElementById("previewSec").style.width = "0"
-  document.getElementById("closeBtn").style.opacity = "100%"
-  
-}
+// ~500px media selector overlay navbar not push margins
+// media selector to make mobile navbar overlay dissappear
+// function viewTop() {
+//   topSec.scrollIntoView()
+//   document.getElementById("wrapper").style.marginLeft = "0"
+// }
 
 function viewTop() {
   topSec.scrollIntoView()
@@ -45,11 +37,44 @@ function viewillusSec() {
   illusSec.scrollIntoView()
 }
 
+//  preview sec
 
-const pageFlip = new St.PageFlip(document.getElementById('book'), 
+function preview() {
+  // document.getElementById("wrapper").style.backgroundColor = "rgba(0, 0, 0, .7)"
+  document.getElementById("previewSec").style.width = "90vw"
+  document.getElementById("sidenav").style.width = "10vw"
+  document.getElementById("closeBtn").style.opacity = "0"
+  document.getElementById("wrapper").style.marginLeft = "10vw"
+  var ovr = document.querySelectorAll("#overlay")
+  for (var i = 0; i < ovr.length; i++) {
+    var currOvr = ovr[i]
+    currOvr.style.display = "none"
+  }
+
+}
+
+function closePreview() {
+  var lastLink = document.getElementById
+  document.getElementById("previewSec").style.width = "0"
+  document.getElementById("closeBtn").style.opacity = "100%"
+  document.getElementById("overlay").style.display = "block"
+  var ovr = document.querySelectorAll("#overlay")
+  for (var i = 0; i < ovr.length; i++) {
+    var currOvr = ovr[i]
+    currOvr.style.display = "block"
+  }
+}
+
+// book section
+
+const pageFlip = new St.PageFlip(document.getElementById('coastalbook'), 
     {
-        width: 1100, // required parameter - base page width
-        height: 1000,  // required parameter - base page height
+        width: 645, // required parameter - base page width
+        height: 500,  // required parameter - base page height
+        minWidth: 645,
+        minHeight: 500,
+        maxWidth: 645,
+        maxHeight: 500,
         showCover: true,
         size:("stretch"),
         usePortrait: false
@@ -58,24 +83,3 @@ const pageFlip = new St.PageFlip(document.getElementById('book'),
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
-const pageFlips = new St.PageFlip(document.getElementById('book2'), 
-    {
-        width: 1100, // required parameter - base page width
-        height: 600,  // required parameter - base page height
-        showCover: true,
-        size:("stretch"),
-        minWidth: 600,
-        maxWidth: 1100,
-        minHeight: 300,
-        maxHeight: 800,
-        usePortrait: false
-
-    }
-);
-
-pageFlips.loadFromHTML(document.querySelectorAll('.my-pages'));
-// media selector to make mobile ui dissappear
-// function viewTop() {
-//   topSec.scrollIntoView()
-//   document.getElementById("wrapper").style.marginLeft = "0"
-// }
