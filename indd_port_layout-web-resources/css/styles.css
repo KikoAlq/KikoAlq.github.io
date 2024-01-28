@@ -195,7 +195,7 @@ p.scroll-text {
   transition: 1s;
 }
 .book-wrapper {
-  height: 100vh;
+  height: 80vh;
   width: auto;
 }
 .descText {
@@ -229,9 +229,16 @@ p.scroll-text {
 	width: auto;
 }
 
+.coastalProcess img {
+  max-height: 700px;
+}
+.coastalProcess p {
+  margin: 2vh 0 14vh;
+}
+
 /* wanted */
 .wantedBook {
-  margin: 50px 0 50px 16vh;
+  margin: 50px 0 50px 8vw;
 }
 .wanted-page {
 	background-color: white;
@@ -243,16 +250,14 @@ p.scroll-text {
 }
 
 /* -footer */
-footer {
+.mainfoot {
+  display: block;
   flex-shrink: 0;
 	margin: 25vh 50px 0;
 	padding: 0 50px 5px;
 	height: 20px;
 	font-size: 12px;
 	line-height: .05;
-}
-footer p {
-	display: inline;
 }
 .attr-foot {
 	float: right;
