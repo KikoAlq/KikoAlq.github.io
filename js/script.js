@@ -28,36 +28,36 @@ function closeNav() {
 // }
 
 function viewTop() {
-  topSec.scrollIntoView()
+  topSec.scrollIntoView({behavior: "smooth"})
 }
 
 function viewinternSec() {
-  internSec.scrollIntoView()
+  internSec.scrollIntoView({behavior: "smooth"})
 
 }
 function viewinternPrev() {
-  internPrev.scrollIntoView()
+  internPrev.scrollIntoView({behavior: "smooth"})
 }
 
 function viewprintSec() {
-  printSec.scrollIntoView()
+  printSec.scrollIntoView({behavior: "smooth"})
 }
 function viewprintPrev() {
-  printPrev.scrollIntoView()
+  printPrev.scrollIntoView({behavior: "smooth"})
 }
 
 function viewposterSec() {
-  posterSec.scrollIntoView({block: "center"})
+  posterSec.scrollIntoView({behavior: "smooth"})
 }
 function viewposterPrev() {
-  posterPrev.scrollIntoView()
+  posterPrev.scrollIntoView({behavior: "smooth"})
 }
 
 function viewillusSec() {
-  illusSec.scrollIntoView({block: "center"})
+  illusSec.scrollIntoView({behavior: "smooth"})
 }
 function viewillusPrev() {
-  illusPrev.scrollIntoView()
+  illusPrev.scrollIntoView({behavior: "smooth"})
 }
 
 //  preview
@@ -78,16 +78,16 @@ function preview(lastClicked) {
   console.log(lastClicked)
   switch(lastClicked) {
     case lastClicked = "internSec":
-      internPrev.scrollIntoView()
+      internPrev.scrollIntoView({behavior: "instant"})
       break;
     case lastClicked = "printSec":
-      printPrev.scrollIntoView()
+      printPrev.scrollIntoView({behavior: "instant"})
       break;
     case lastClicked = "posterSec":
-      posterPrev.scrollIntoView()
+      posterPrev.scrollIntoView({behavior: "instant"})
       break;
     case lastClicked = "illusSec":
-      illusPrev.scrollIntoView()
+      illusPrev.scrollIntoView({behavior: "instant"})
       break;
   }
   linkTab = document.getElementById(lastClicked)
@@ -109,6 +109,8 @@ function closePreview() {
 
 // books
 
+// coastal
+
 const pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
     {
         width: 645, // required parameter - base page width
@@ -125,7 +127,7 @@ const pageFlip = new St.PageFlip(document.getElementById('coastalBook'),
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
-
+// wanted
 
 const wantedMag = new St.PageFlip(document.getElementById('wantedBook'), 
     {
@@ -143,13 +145,15 @@ const wantedMag = new St.PageFlip(document.getElementById('wantedBook'),
 
 wantedMag.loadFromHTML(document.querySelectorAll('.wanted-page'));
 
+// welcome weekend
+
 const wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
     {
-        width: 517, // required parameter - base page width
+        width: 658, // required parameter - base page width
         height: 800,  // required parameter - base page height
-        minWidth: 517,
+        minWidth: 658,
         minHeight: 800,
-        maxWidth: 517,
+        maxWidth: 658,
         maxHeight: 800,
         showCover: true,
         size:("stretch"),
