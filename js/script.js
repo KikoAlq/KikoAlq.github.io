@@ -67,7 +67,7 @@ function closePreview() {
 
 // book section
 
-const pageFlip = new St.PageFlip(document.getElementById('coastalbook'), 
+const pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
     {
         width: 645, // required parameter - base page width
         height: 500,  // required parameter - base page height
@@ -83,3 +83,20 @@ const pageFlip = new St.PageFlip(document.getElementById('coastalbook'),
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
+
+
+const wantedMag = new St.PageFlip(document.getElementById('wantedBook'), 
+    {
+        width: 645, // required parameter - base page width
+        height: 500,  // required parameter - base page height
+        minWidth: 645,
+        minHeight: 500,
+        maxWidth: 645,
+        maxHeight: 500,
+        showCover: true,
+        size:("stretch"),
+        usePortrait: false
+    }
+);
+
+wantedMag.loadFromHTML(document.querySelectorAll('.wanted-page'));
