@@ -21,31 +21,6 @@ a:visited {
 	color: none;
 }
 
-/* -Main -Top of Page */
-
-.frontpage {
-	background-image: url("../../imgs/koisized.png"); 
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	display: flex;
-	flex-direction: column;
-}
-.wrapper {
-	display: block;
-	flex: 1 0 auto;
-  transition: .5s;
-}
-.top-wrapper {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-}
-.top-wrapper .title {
-	flex: 1 0 auto;
-}
-
 /* -navbar */
 
 .burger-bar img {
@@ -81,6 +56,30 @@ a:visited {
 }
 .closebtn:hover {
 	color: mediumaquamarine;
+}
+
+/* -Main -Top of Page */
+
+.frontpage {
+	background-image: url("../../imgs/koisized.png"); 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper {
+	display: block;
+  transition: .5s;
+}
+.top-wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.top-wrapper .title {
+	flex: 1 0 auto;
 }
 
 /* -title section */
@@ -184,6 +183,7 @@ p.scroll-text {
 /* -preview section */
 
 .previewSec {
+  scroll-behavior: smooth;
 	display: flex;
 	flex-direction: column;
   right: 0%;
@@ -199,7 +199,7 @@ p.scroll-text {
   width: auto;
 }
 .descText {
-  margin: 0 16vh 0;
+  margin: 0 8vw 0;
 }
 .previewSec h2 {
   font-size: 2rem;
@@ -218,7 +218,7 @@ p.scroll-text {
 
 /* coastal */
 .coastalBook {
-  margin: 50px 0 50px 16vh;
+  margin: 50vh 0 50px 8vw;
 }
 .my-page {
 	background-color: white;
