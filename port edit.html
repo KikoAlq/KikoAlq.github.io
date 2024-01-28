@@ -25,10 +25,18 @@
 		<div id="sidenav" class="navbar">
 			<div id="closeBtn" class="closebtn" onClick="closeNav()">&times;</div>
 			<a class="navbtn" onclick="viewTop()">top</a>
-			<a class="navbtn" onclick="viewinternSec()">internship</a>
-			<a class="navbtn" onclick="viewprintSec()">print</a>
-			<a class="navbtn" onclick="viewposterSec()">posters</a>
-			<a class="navbtn" onclick="viewillusSec()">illustration</a>
+      <div id="btns1" class="btns1">
+        <a class="navbtn" onclick="viewinternSec()">internship</a>
+        <a class="navbtn" onclick="viewprintSec()">print</a>
+        <a class="navbtn" onclick="viewposterSec()">posters</a>
+        <a class="navbtn" onclick="viewillusSec()">illustration</a>
+      </div>
+      <div id="btns2" class="btns2">
+        <a class="navbtn" onclick="viewinternPrev()">internship</a>
+        <a class="navbtn" onclick="viewprintPrev()">print</a>
+        <a class="navbtn" onclick="viewposterPrev()">posters</a>
+        <a class="navbtn" onclick="viewillusPrev()">illustration</a>
+      </div>
 			<a class="navbtn">resume</a>	
 			<a id="linkedinLink" href="http://www.linkedin.com/in/kiko-alquiros/" class="navbtn">linkedin</a>
 		</div>
@@ -39,11 +47,38 @@
 
       <div id="closePreview" class="closebtn" onClick="closePreview()">&times;</div>
 
-      <div id="internPrev">
-        
+      <div id="internPrev" class="internPrev">
+        <!-- Wanted One Piece -->
+        <div class="book-wrapper">
+          <div id="WW2018" class="WW2018">
+            <div class="welcome-page">
+              <img src="imgs\wanted pirate mag\wanted covers_01.png">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\wanted pirate mag\wanted covers_02.png">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\wanted pirate mag\wanted covers_03.png">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\wanted pirate mag\wanted covers_03.png">
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="descText">
+          <h2>
+            WANTED One Piece Magazine
+          </h2>
+          <p>
+            Personal project magazine featuring the live action cast 
+            of Netflix's Live Action One Piece.
+          </p>
+        </div>
       </div>
 
-      <div id="printPrev">
+      <div id="printPrev" class="printPrev">
         <!-- Wanted One Piece -->
         <div class="book-wrapper">
           <div id="wantedBook" class="wantedBook">
@@ -97,15 +132,16 @@
             </div>
           
           </div>
-          <div class="descText">
-            <h2>
-              WANTED One Piece Magazine
-            </h2>
-            <p>
-              Personal project magazine featuring the live action cast 
-              of Netflix's Live Action One Piece.
-            </p>
-          </div>
+          
+        </div>
+        <div class="descText">
+          <h2>
+            WANTED One Piece Magazine
+          </h2>
+          <p>
+            Personal project magazine featuring the live action cast 
+            of Netflix's Live Action One Piece.
+          </p>
         </div>
         <!-- Coastal Design Guide -->
         <div class="book-wrapper">
@@ -148,45 +184,64 @@
             </div>
           
           </div>
-          <div class="descText">
-            <h2>
-              coastal apparel design standards
-            </h2>
+          
+        </div>
+        <div class="descText">
+          <h2>
+            coastal apparel design standards
+          </h2>
+          <p>
+            A self-made project for a non-traditional apparel brand, taking inspiration from
+            famous traditional art from japan.
+          </p>
+          <div id="coastalProcess" class="coastalProcess">
+            <img src="imgs\coastal rebrand\old coastal.png">
             <p>
               A self-made project for a non-traditional apparel brand, taking inspiration from
               famous traditional art from japan.
             </p>
-            <div id="coastalProcess" class="coastalProcess">
-              <img src="imgs\coastal rebrand\old coastal.png">
-              <p>
-                A self-made project for a non-traditional apparel brand, taking inspiration from
-                famous traditional art from japan.
-              </p>
-              <img src="imgs\coastal rebrand\Under-the-Wave-off-Kanagawa-Hokusa-1080x675.jpg">
-              <p>
-                A self-made project for a non-traditional apparel brand, taking inspiration from
-                famous traditional art from japan.
-              </p>
-              <img src="imgs\coastal rebrand\coastal photoshop pass.jpg">
-              <p>
-                A self-made project for a non-traditional apparel brand, taking inspiration from
-                famous traditional art from japan.
-              </p>
-              <img src="imgs\coastal rebrand\coastal variations.png">
-              <p>
-                A self-made project for a non-traditional apparel brand, taking inspiration from
-                famous traditional art from japan.
-              </p>
-            </div>
+            <img src="imgs\coastal rebrand\Under-the-Wave-off-Kanagawa-Hokusa-1080x675.jpg">
+            <p>
+              A self-made project for a non-traditional apparel brand, taking inspiration from
+              famous traditional art from japan.
+            </p>
+            <img src="imgs\coastal rebrand\coastal photoshop pass.jpg">
+            <p>
+              A self-made project for a non-traditional apparel brand, taking inspiration from
+              famous traditional art from japan.
+            </p>
+            <img src="imgs\coastal rebrand\coastal variations.png">
+            <p>
+              A self-made project for a non-traditional apparel brand, taking inspiration from
+              famous traditional art from japan.
+            </p>
           </div>
         </div>
-        <footer>
-          <h2>you've reached the end!</h2>
-          <p class="contact-foot">contact me</p>
-          <p class="attr-foot">kiko alquiros 2024	&copy;</p>
-        </footer>
       </div>
 
+      <div id="posterPrev" class="posterPrev">
+        <div class="descText">
+          <h2>
+            WANTED One Piece Magazine
+          </h2>
+          <p>
+            Personal project magazine featuring the live action cast 
+            of Netflix's Live Action One Piece.
+          </p>
+        </div>
+      </div>
+
+      <div id="illusPrev" class="illusPrev">
+        <div class="descText">
+          <h2>
+            WANTED One Piece Magazine
+          </h2>
+          <p>
+            Personal project magazine featuring the live action cast 
+            of Netflix's Live Action One Piece.
+          </p>
+        </div>
+      </div>
     </div>
 
 <!-- landing page -->
