@@ -29,7 +29,7 @@ a:visited {
 .burger-bar img {
 	position: fixed;
 	max-height: 80px;
-	margin: 5vw;
+	margin: 5vh 5vw;
 }
 .navbar {
   overflow-x: hidden;
@@ -153,6 +153,8 @@ p.scroll-text {
 	line-height: 1.3;
 }
 .thumbnail {
+	max-width: 30vw;
+	max-height: 30vw;
   transition: .5s;
   align-self: center;
   transition-delay: -.5s;
@@ -160,19 +162,26 @@ p.scroll-text {
 	padding-top: 5vh;
 }
 .thumbnail img {
-	max-width: 40vw;
-	max-height: 60vh;
+	max-width: 30vw;
+	max-height: 30vw;
 	box-shadow: 5px 5px 25px 5px black;
 }
 .overlay {
-  height: 100%;
-  width: 100%;
+	width: 30vw;
+	height: 30vw;
+	position: absolute;
   opacity: 0;
   transition: .5s;
 }
+.overlay p {
+	transform: translate(0, 15vw);
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+}
 .thumbnail:hover .overlay{
   opacity: 1;
-	background-color: rgba(255, 255, 255, 0.836);
+	background-color: rgba(24, 24, 24, 0.7);
 }
 .port-details {
 	display: block;
@@ -225,6 +234,7 @@ p.scroll-text {
 }
 .descText h2 {
   font-size: 2.5rem;
+	padding-top: 5vh;
 }
 .descText p {
   font-size: 1.5em;
