@@ -147,7 +147,7 @@ p.scroll-text {
 	grid-auto-rows: 100vh;
   align-items: end;
   width: auto;
-	margin: 0 0 0 100px;
+	margin: 0 0 0 15vw;
 	grid-column-gap: 50px;
 	grid-row-gap: 50px;
 	font-size: 1.6rem;
