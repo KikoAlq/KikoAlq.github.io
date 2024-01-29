@@ -75,7 +75,6 @@ function viewillusPrev() {
 //  preview
 
 function preview(lastClicked) {
-  document.getElementById("sidenav").style.width = "10vw"
   document.getElementById("wrapper").style.marginLeft = "10vw"
   document.getElementById("wrapper").style.display = "none"
   document.getElementById("btns1").style.display = "none"
