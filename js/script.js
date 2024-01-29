@@ -32,7 +32,7 @@ function viewTop() {
 }
 
 function viewinternSec() {
-  internSec.scrollIntoView({behavior: "smooth", block: "center"})
+  internSec.scrollIntoView({behavior: "smooth"})
 
 }
 function viewinternPrev() {
@@ -40,21 +40,21 @@ function viewinternPrev() {
 }
 
 function viewprintSec() {
-  printSec.scrollIntoView({behavior: "smooth", block: "center"})
+  printSec.scrollIntoView({behavior: "smooth"})
 }
 function viewprintPrev() {
   printPrev.scrollIntoView({behavior: "instant"})
 }
 
 function viewposterSec() {
-  posterSec.scrollIntoView({behavior: "smooth", block: "center"})
+  posterSec.scrollIntoView({behavior: "smooth"})
 }
 function viewposterPrev() {
   posterPrev.scrollIntoView({behavior: "instant"})
 }
 
 function viewillusSec() {
-  illusSec.scrollIntoView({behavior: "smooth", block: "center"})
+  illusSec.scrollIntoView({behavior: "smooth"})
 }
 function viewillusPrev() {
   illusPrev.scrollIntoView({behavior: "instant"})
@@ -70,6 +70,7 @@ function preview(lastClicked) {
   document.getElementById("wrapper").style.display = "none"
   document.getElementById("btns1").style.display = "none"
   document.getElementById("btns2").style.display = "flex"
+  document.getElementById("sidenav").style.backgroundColor = "rgb(69,69,69)"
   var ovr = document.querySelectorAll("#overlay")
   for (var i = 0; i < ovr.length; i++) {
     var currOvr = ovr[i]
@@ -99,12 +100,13 @@ function closePreview() {
   document.getElementById("wrapper").style.display = "block"
   document.getElementById("btns1").style.display = "flex"
   document.getElementById("btns2").style.display = "none"
+  document.getElementById("sidenav").style.backgroundColor = "#111"
   var ovr = document.querySelectorAll("#overlay")
   for (var i = 0; i < ovr.length; i++) {
     var currOvr = ovr[i]
     currOvr.style.display = "block"
   }
-  linkTab.scrollIntoView({block: "center"})
+  linkTab.scrollIntoView()
 }
 
 // books
