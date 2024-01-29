@@ -36,28 +36,28 @@ function viewinternSec() {
 
 }
 function viewinternPrev() {
-  internPrev.scrollIntoView({behavior: "smooth"})
+  internPrev.scrollIntoView({behavior: "instant"})
 }
 
 function viewprintSec() {
   printSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewprintPrev() {
-  printPrev.scrollIntoView({behavior: "smooth"})
+  printPrev.scrollIntoView({behavior: "instant"})
 }
 
 function viewposterSec() {
   posterSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewposterPrev() {
-  posterPrev.scrollIntoView({behavior: "smooth"})
+  posterPrev.scrollIntoView({behavior: "instant"})
 }
 
 function viewillusSec() {
   illusSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewillusPrev() {
-  illusPrev.scrollIntoView({behavior: "smooth"})
+  illusPrev.scrollIntoView({behavior: "instant"})
 }
 
 //  preview
@@ -78,16 +78,16 @@ function preview(lastClicked) {
   console.log(lastClicked)
   switch(lastClicked) {
     case lastClicked = "internSec":
-      internPrev.scrollIntoView({behavior: "instant"})
+      viewinternPrev()
       break;
     case lastClicked = "printSec":
-      printPrev.scrollIntoView({behavior: "instant"})
+      viewprintPrev()
       break;
     case lastClicked = "posterSec":
-      posterPrev.scrollIntoView({behavior: "instant"})
+      posterPrev.scrollIntoView()
       break;
     case lastClicked = "illusSec":
-      illusPrev.scrollIntoView({behavior: "instant"})
+      illusPrev.scrollIntoView()
       break;
   }
   linkTab = document.getElementById(lastClicked)
@@ -104,7 +104,7 @@ function closePreview() {
     var currOvr = ovr[i]
     currOvr.style.display = "block"
   }
-  linkTab.scrollIntoView()
+  linkTab.scrollIntoView({block: "center"})
 }
 
 // books
@@ -131,12 +131,12 @@ pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
 const wantedMag = new St.PageFlip(document.getElementById('wantedBook'), 
     {
-        width: 517, // required parameter - base page width
-        height: 800,  // required parameter - base page height
-        minWidth: 517,
-        minHeight: 800,
-        maxWidth: 517,
-        maxHeight: 800,
+        width: 388, // required parameter - base page width
+        height: 600,  // required parameter - base page height
+        minWidth: 388,
+        minHeight: 600,
+        maxWidth: 388,
+        maxHeight: 600,
         showCover: true,
         size:("stretch"),
         usePortrait: false
@@ -149,12 +149,12 @@ wantedMag.loadFromHTML(document.querySelectorAll('.wanted-page'));
 
 const wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
     {
-        width: 658, // required parameter - base page width
-        height: 800,  // required parameter - base page height
-        minWidth: 658,
-        minHeight: 800,
-        maxWidth: 658,
-        maxHeight: 800,
+        width: 494, // required parameter - base page width
+        height: 600,  // required parameter - base page height
+        minWidth: 494,
+        minHeight: 600,
+        maxWidth: 494,
+        maxHeight: 600,
         showCover: true,
         size:("stretch"),
         usePortrait: false
@@ -167,12 +167,12 @@ wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
 
 const vegasStr = new St.PageFlip(document.getElementById('vegasStr'), 
     {
-        width: 517, // required parameter - base page width
-        height: 800,  // required parameter - base page height
-        minWidth: 517,
-        minHeight: 800,
-        maxWidth: 517,
-        maxHeight: 800,
+      width: 388, // required parameter - base page width
+      height: 600,  // required parameter - base page height
+      minWidth: 388,
+      minHeight: 600,
+      maxWidth: 388,
+      maxHeight: 600,
         showCover: true,
         size:("stretch"),
         usePortrait: false
@@ -185,12 +185,12 @@ vegasStr.loadFromHTML(document.querySelectorAll('.vegas-page'));
 
 const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
     {
-        width: 285, // required parameter - base page width
-        height: 800,  // required parameter - base page height
-        minWidth: 285,
-        minHeight: 800,
-        maxWidth: 285,
-        maxHeight: 800,
+        width: 214, // required parameter - base page width
+        height: 600,  // required parameter - base page height
+        minWidth: 214,
+        minHeight: 600,
+        maxWidth: 214,
+        maxHeight: 600,
         showCover: true,
         size:("stretch"),
         usePortrait: false
@@ -212,7 +212,8 @@ const lokoFilter = new St.PageFlip(document.getElementById('lokoFilter'),
         showCover: true,
         size:("stretch"),
         usePortrait: false,
-        drawShadow: false
+        drawShadow: false,
+        autoSize: false
     }
 );
 

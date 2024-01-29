@@ -5,7 +5,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	font-size: 10px;
+	font-size: 8px;
   scroll-behavior: auto;
   margin: 0;
 }
@@ -159,7 +159,7 @@ p.scroll-text {
   transition-delay: -.5s;
 }
 .thumbnail img {
-	max-width: 400px;
+	max-width: 300px;
   margin: 20px 0 0;
 	box-shadow: 5px 5px 25px 5px black;
   transition: 1s;
@@ -179,8 +179,7 @@ p.scroll-text {
 }
 .port-details{
   max-width: 1000px;
-	padding: 30px;
-  display: inline;
+  padding: 30px;
   align-self: stretch;
   margin: 25vh 0 25vh;
   background-color: rgba(24, 24, 24, 0.3);
@@ -224,7 +223,7 @@ p.scroll-text {
   width: auto;
 }
 .book-wrapper .lokoFilter {
-	height: 800px;
+	max-height: 100%;
 	width: auto;
   }
 .oldCoastal {
@@ -242,7 +241,7 @@ p.scroll-text {
   margin: 0 8vw 0;
 }
 .descText img {
-  max-height: 700px;
+  max-height: 500px;
   margin-bottom: 50px;
 }
 .descText .interactWith {

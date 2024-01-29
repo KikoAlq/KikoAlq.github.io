@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Kiko Alquiros' Portfolio</title>
+    <script src="js\script.js" defer></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="node_modules\page-flip\dist\js\page-flip.browser.js"></script>
+    <link rel="icon" type="image/x-icon" href="imgs/favicon/BIGRPS_Bot.gif">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+		<link href="indd_port_layout-web-resources/css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+	<body id="frontpage" class="frontpage">
+		
+<!-- navigation -->
+
+		<div id="burger-bar" class="burger-bar" >
+			<img onclick="openNav()" src="imgs/hamburg menu.png" alt="navigate"/>
+		</div>
+		
+		<div id="sidenav" class="navbar">
+			<div id="closeBtn" class="closebtn" onClick="closeNav()">&times;</div>
+			<a class="navbtn" onclick="viewTop()">top</a>
+      <div id="btns1" class="btns1">
+        <a class="navbtn" onclick="viewinternSec()">internship</a>
+        <a class="navbtn" onclick="viewprintSec()">print</a>
+        <a class="navbtn" onclick="viewposterSec()">posters</a>
+        <a class="navbtn" onclick="viewillusSec()">illustration</a>
+      </div>
+      <div id="btns2" class="btns2">
+        <a class="navbtn" onclick="viewinternPrev()">internship</a>
+        <a class="navbtn" onclick="viewprintPrev()">print</a>
+        <a class="navbtn" onclick="viewposterPrev()">posters</a>
+        <a class="navbtn" onclick="viewillusPrev()">illustration</a>
+      </div>
+			<a class="navbtn">resume</a>	
+			<a id="linkedinLink" href="http://www.linkedin.com/in/kiko-alquiros/" class="navbtn">linkedin</a>
+		</div>
+
+<!-- preview page -->
+      
+    <div id="previewSec" class="previewSec"> 
+
+      <div id="closePreview" class="closebtn" onClick="closePreview()">&times;</div>
+
+<!-- internship/Campus Life -->
+
+      <div id="internPrev" class="internPrev">
+        <div class="descText">
+          <h2>
+            SUNY Potsdam Campus Life Fall 2017 - Spring 2018
+          </h2>
+        </div>
+
+        <!-- Welcome Weekend 2018 Potsdam -->
+
+        <div class="book-wrapper">
+          <div id="WW2018" class="WW2018">
+            <div class="welcome-page">
+              <img src="imgs\Potsdam Campus Life\WW2018 booklet2.png" alt="oh no!">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\Potsdam Campus Life\WW2018 booklet3.png" alt="oh no!">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\Potsdam Campus Life\WW2018 booklet4.png" alt="oh no!">
+            </div>
+            <div class="welcome-page">
+              <img src="imgs\Potsdam Campus Life\WW2018 booklet.png" alt="oh no!">
+            </div>
+          </div>
+        </div>
+        <div class="descText">
+          <p class="interactWith">
+            flip the page!
+          </p>
+          <h2>
+            Welcome Weekend SUNY Potsdam 2018
+          </h2>
+          <p>
+            Welcome Weekend is the first event of the school semester at SUNY Potsdam, with a long schedule and many events to attend!
+            The main event was the Carvnival, which I designed a poster for alongside the schedule, as well as staffed the main floor during the event.
+          </p>
+          <img src="imgs\Potsdam Campus Life\Welcome Weekend Carnival Poster.png" alt="oh no!">
+          <p>
+            Welcome Wekend Carnival Poster
+          </p>
+        </div>
+
+        <!-- Vegas Night 2017 -->
+
+        <div class="book-wrapper">
+          <div id="vegasStr" class="vegasStr">
+            <div class="vegas-page" data-density="hard">
+              <img src="imgs\Potsdam Campus Life\Vegas Strong Main Final.png" alt="oh no!">
+            </div>
+            <div class="vegas-page" data-density="hard">
+              <img src="imgs\Potsdam Campus Life\Vegas Strong Music Flier.png" alt="oh no!">
+            </div>
+            <div class="vegas-page" data-density="hard">
+              <img src="imgs\Potsdam Campus Life\Vegas Strong Prize List.png" alt="oh no!">
+            </div>
+            <div class="vegas-page" data-density="hard">
+              <img src="imgs\Potsdam Campus Life\Vegas Strong Food & Games.png" alt="oh no!">
+            </div>
+            <div class="vegas-page" data-density="hard">
+              <img src="imgs\Potsdam Campus Life\Vegas Strong Mocktails.png" alt="oh no!">
+            </div>
+          </div>
+        </div>
+        <div class="descText">
+          <p class="interactVegas">
+            flip the page!
+          </p>
+          <h2>
+            Vegas Strong 2017
+          </h2>
+          <p>
+            Vegas Night is a event that is hosted yearly in Potsdam, but this event was one 
+            that was almost cancelled at the last minute. That year, a mass shooting occurred 
+            when 64-year-old Stephen Paddock opened fire on the crowd attending the 
+            Route 91 Harvest music festival on the Las Vegas Strip in Nevada from his 
+            32nd-floor suites in the Mandalay Bay hotel. He fired more than 1,000 rounds, 
+            killing 60 people and wounding at least 413. ("2017 Las Vegas Shooting", n.d.)
+            Instead of fully cancelling the event, the leaders at Campus Life decided to 
+            switch the focus of the branding and begin a fundraiser for a fund that supported
+            families and victims of the shooting. The design work from the first two weeks 
+            were scrapped, and within the next week I needed to fully redo what was needed for
+            the event to reflect a drastic change in tone.
+          </p>
+          <img src="imgs\Potsdam Campus Life\Vegas Strong Final Insta.png" alt="oh no!">
+          <p>instagram post</p>
+        </div>
+
+        <!-- Library Banners -->
+
+        <div class="descText">
+          <h2>
+            Internship at the Office of College Communications Spring 2018
+          </h2>
+        </div>
+        <div class="book-wrapper">
+          <div id="libraryBan" class="libraryBan">
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Whale Banner.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Whale Banner Back.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Minerva Banner.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Minerva Banner Back.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Dancer Banner.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Dancer Banner Back.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Bear Banner.png" alt="oh no!">
+            </div>
+            <div class="banner-page" data-density="soft">
+              <img src="imgs\Potsdam internship\banners\Bear Banner Back.png" alt="oh no!">
+            </div>
+          </div>
+        </div>
+        <div class="descText">
+          <p class="interactBanners">
+            flip the page!
+          </p>
+          <h2>
+            Banners For Crumb Library
+          </h2>
+          <p>
+            Banners designed to be displayed at the Crumb Library on Campus at SUNY Potsdam.
+          </p>
+          <h2>
+            Other Posters
+          </h2>
+          <img src="imgs\Potsdam internship\CSO Tour 2018 Poster.png" alt="oh no!">
+          <p>
+            Orchestra Tour Poster
+          </p>
+          <img src="imgs\Potsdam internship\Pirates of Pezance 11 x 17.png" alt="oh no!">
+          <p>
+            Poster for The Pirates of Penzance
+          </p>
+        </div>
+
+        <div class="book-wrapper">
+          <div id="lokoFilter" class="lokoFilter">
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter1 ex1.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter1 ex2.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter1 ex3.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter1.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter2 ex1.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter2 ex2.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter2 ex3.png" alt="oh no!">
+            </div>
+            <div class="filter-page" data-density="hard">
+              <img src="imgs\Potsdam internship\LoKoFilter2.png" alt="oh no!">
+            </div>
+          </div>
+        </div>
+        <div class="descText">
+          <p class="interactFilters">
+            flip the page!
+          </p>
+          <h2>
+            LOKO Arts Festival Snapchat Filters
+          </h2>
+          <p>
+            The Loko Arts Festival was started in 2012, with the support of Kathy (Kofoed) Lougheed,
+            and her husband Don Lougheed, whose faces feature on the filter. During the festival,
+            SUNY Potsdam celebrates the campus culture of creativity and reinforces how important 
+            the arts are to learning environments for every discipline as well as a lifetime of 
+            creativity for anyone who is crazy for the arts. 
+            (from <a href="https://www.potsdam.edu/about/campus/creative/loko/about">potsdam.edu/about/campus/creative/loko/about</a>)
+          </p>
+        </div>
+
+      </div>
+
+<!-- print section -->
+      
+      <div id="printPrev" class="printPrev">
+        <div class="descText">
+          <h2>
+            Print Projects 2024
+          </h2>
+        </div>
+        <!-- Wanted One Piece -->
+        <div class="book-wrapper">
+          <div id="wantedBook" class="wantedBook">
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_01.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_02.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_03.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_04.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_05.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_07.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_08.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_09.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_10.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_11.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_12.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_13.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_14.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_15.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted pages_16.png" alt="oh no!">
+            </div>
+            <div class="wanted-page">
+              <img src="imgs\wanted pirate mag\wanted covers_06.png" alt="oh no!">
+            </div>
+          
+          </div>
+          
+        </div>
+        <div class="descText">
+          <p class="interactWanted">
+            flip the page!
+          </p>
+          <h2>
+            WANTED One Piece Magazine
+          </h2>
+          <p>
+            Personal project magazine featuring the live action cast 
+            of Netflix's Live Action One Piece.
+          </p>
+        </div>
+        <!-- Coastal Design Guide -->
+        <div class="book-wrapper">
+          <div id="coastalBook" class="coastalBook">
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs3.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+                <img src="imgs\coastal rebrand\coastal style guide imgs4.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs5.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs6.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs7.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs8.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs9.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs10.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs11.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs12.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs13.png" alt="oh no!">
+            </div>
+            <div class="my-page">
+              <img src="imgs\coastal rebrand\coastal style guide imgs.png" alt="oh no!">
+            </div>
+          
+          </div>
+          
+        </div>
+        <div class="descText">
+          <p class="interactCoastal">
+            flip the page!
+          </p>
+          <h2>
+            coastal apparel design standards
+          </h2>
+          <p>
+            A personal project done in 2023 based off classwork from my last year in
+            university.
+            A non-traditional apparel brand, inspired from
+            traditional art from japan.
+          </p>
+          <div id="coastalProcess" class="coastalProcess">
+            <img class="oldCoastal" src="imgs\coastal rebrand\old coastal.png" alt="oh no!">
+            <p>
+              Classwork: Branding Assignment 2018
+            </p>
+            <img src="imgs\coastal rebrand\coastal photoshop pass.jpg" alt="oh no!">
+            <p>
+              New company Logo done in Photoshop
+            </p>
+            <img src="imgs\coastal rebrand\coastal variations.png" alt="oh no!">
+            <p>
+              Vector versions of Logo done in Illustrator
+            </p>
+          </div>
+        </div>
+      </div>
+
+<!-- posters section -->
+
+      <div id="posterPrev" class="posterPrev">
+        <div class="descText">
+          <h2>
+            Poster Designs
+          </h2>
+          <img src="imgs\poster\Advertizing Spread.png" alt="oh no!">
+          <p>
+            Advertisement for a fictional exotic burger brand
+          </p>
+          <img src="imgs\poster\Dance Competition.png" alt="oh no!">
+          <p>
+            Dance Competition at SUNY Potsdam
+          </p>
+          <img src="imgs\poster\Gorillaz 2 Ira A.png" alt="oh no!">
+          <img src="imgs\poster\Gorillaz Poster 1.png" alt="oh no!">
+          <p>
+            Classwork (some thought the event was real)
+          </p>
+          <img src="imgs\poster\Gorillaz Redo.png" alt="oh no!">
+          <img src="imgs\poster\Gorillaz Redo2.png" alt="oh no!">
+          <p>
+            Classwork revisit during last semester after a new album had come out
+          </p>
+        </div>
+      </div>
+
+<!-- illustrations section -->
+
+      <div id="illusPrev" class="illusPrev">
+        <div class="descText">
+          <h2>
+            Illustration
+          </h2>
+          <img src="imgs\illustrations\koisized.png" alt="oh no!">
+          <p>
+            The background for this website! done in photoshop
+          </p>
+          <img src="imgs\illustrations\jackie concert sketch.png" alt="oh no!">
+          <img src="imgs\illustrations\Jackie's Recital_Page_1_Page_1.png" alt="oh no!">
+          <p>
+            Illustration made into a concert poster for a friend
+          </p>
+          <img src="imgs\illustrations\Murals Beach.png" alt="oh no!">
+          <img src="imgs\illustrations\Murals Jungle.png" alt="oh no!">
+          <img src="imgs\illustrations\Mural Mockup.jpg" alt="oh no!">
+          <p>
+            Classwork: Proposal for childrens murals
+          </p>
+          <img src="imgs\illustrations\Kiko's Domes.png" alt="oh no!">
+          <p>
+            Adirondack Dome Sketch Summer 2017
+          </p>
+          <img src="imgs\illustrations\pangolin knight.png" alt="oh no!">
+          <p>
+            Pangolin Knight Character Sketch
+          </p>
+          <img src="imgs\illustrations\zombie girl.png" alt="oh no!">
+          <p>
+            Figure drawing Sketch 2017
+          </p>
+        </div>
+      </div>
+
+<!-- \/\/End of preview -->
+
+    </div>
+
+<!-- landing page -->
+
+    <div id="wrapper" class="wrapper" style="background: none;">
+      <div id="topSec" class="top-wrapper">
+        <div class="title">
+          <p class="title-main">KIKO ALQUIROS</p>
+          <p class="title-bottom">designer_ illustrator_ front-end developer</p>
+        </div>
+
+        <div class="scroll">
+        <p class="scroll-text" onclick="viewinternSec()">see more</p>
+          <img src="imgs/scroll down arrow.png" alt="\/" class="scroll-arrow"/>
+        </div>
+      </div>
+      
+      <div id="portGrid" class="port-grid">
+
+        <div id="internSec" class="thumbnail" onclick="preview(this.id)">
+          <img id="internSecimg" class="thumbnail-img" src="imgs/Potsdam Campus Life/Thumbnail Potsdam.png" alt="oops"/>
+          <div id="overlay" class="overlay">projects</div>					
+        </div>
+        <div id="details" class="port-details small-detail">
+          <h3 class="header">SUNY Potsdam Campus Life / Internship</h3>
+          <p>Fall 2017 - Spring 2018</p>
+          <p>
+            I joined the Campus Life office as a Graphic Designer in 2017, and while attending classes,
+            I designed posters, banners, brocures, and graphics for mailers, social media posts,
+            e-mail campaigns, and various print materials for weekly/seasonal events. Until and through the Spring 2018 semester,
+            I remained at my position at Campus Life, while also taking up an Internship
+            at the Office of College Communications at SUNY Potsdam, and collaborated on a number
+            of events around the campus, including the Crane school of Music.
+          </p>
+        </div>
+        
+        <div id="printSec" class="thumbnail" onclick="preview(this.id)">
+          <img src="imgs/coastal rebrand/Coastal Rebrand Thumbnail-1000px.png" alt="oops"/>
+          <div id="overlay" class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details small-detail">
+          <h3 class="header">Print Media</h3>
+          <p>A collection of projects done to reinforce skills during my career break.</p>
+        </div>
+        
+        <div id="posterSec" class="thumbnail" onclick="preview(this.id)">
+          <img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
+          <div id="overlay" class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details">
+          <h3 class="header">Posters</h3>
+        </div>
+
+        <div id="illusSec" class="thumbnail" onclick="preview(this.id)">
+          <img src="imgs/poster/Gorillaz Redo.png" alt="oops"/>
+          <div id="overlay" class="overlay">projects</div>
+        </div>
+        <div id="details" class="port-details">
+          <h3 class="header">Illustration</h3>
+        </div>
+        
+      </div>
+
+      <footer class="mainfoot">
+        <h2>This page was created and styled by me for viewers like you</h2>
+        <p class="contact-foot">uses StPageFlip by 
+          <a href="https://github.com/Nodlik/StPageFlip/releases">Nodlik</a>
+          MIT License &copy; 2020
+        </p>
+        <p class="attr-foot">kiko alquiros 2024</p>
+      </footer>
+    </div>
+		
+	</body>
+</html>
+
+<!-- https://drive.google.com/file/d/1Um80WRDpFzWdHoAUndMkKurZyOuwmvGy/view?usp=sharing-->
+<!-- resume link ^^ -->
