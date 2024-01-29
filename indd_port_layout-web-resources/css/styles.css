@@ -177,8 +177,8 @@ p.scroll-text {
 .thumbnail:hover .overlay{
   opacity: 1;
 }
-.port-details{
-  max-width: 1000px;
+.port-details {
+  max-width: 600px;
   padding: 30px;
   align-self: stretch;
   margin: 25vh 0 25vh;
@@ -193,10 +193,7 @@ p.scroll-text {
 .port-details p {
 	font-size: 2rem;
 	line-height: 1.5;
-	margin: 20px 100px 20px 0;
-}
-.small-detail {
-  padding-top: 130px;
+  margin: 20px;
 }
 
 /* -preview section */
@@ -245,19 +242,19 @@ p.scroll-text {
   margin-bottom: 50px;
 }
 .descText .interactWith {
-	margin: 0 0 0 1230px;
+	margin: 0 0 0 920px;
 }
 .descText .interactBanners {
-	margin: 0 0 0 485px;
+	margin: 0 0 0 360px;
 }
 .descText .interactVegas {
-	margin: 0 0 0 950px;
+	margin: 0 0 0 710px;
 }
 .descText .interactFilters {
 	margin: 0 0 0 680px;
 }
 .descText .interactWanted {
-	margin: 0 0 0 945px;
+	margin: 0 0 0 710px;
 }
 .descText .interactCoastal {
 	margin: 0 0 0 1200px;
