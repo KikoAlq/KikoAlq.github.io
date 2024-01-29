@@ -213,20 +213,23 @@ p.scroll-text {
   height: 100%;
   width: auto;
 }
-div h2 {
+.descText h2 {
   font-size: 2rem;
 }
-div p {
+.descText p {
   font-size: 1.5em;
+  width: 650px;
+  margin: 2vh 0 14vh;
 }
 .descText {
   margin: 0 8vw 0;
 }
 .descText img {
   max-height: 700px;
+  margin-bottom: 50px;
 }
-.descText p {
-  margin: 2vh 0 14vh;
+.descText .interactWith {
+	margin: 0 0 0 900px;
 }
 /* for each book */
 
@@ -234,15 +237,39 @@ div p {
 
 .WW2018 {
 	margin: 50px 0 50px 8vw;
-  }
-  .welcome-page {
-	  background-color: white;
-	  color: black;
-  }
-  .welcome-page img {
-	  height: 100%;
-	  width: auto;
-  }
+}
+.welcome-page {
+	background-color: white;
+	color: black;
+}
+.welcome-page img {
+	height: 100%;
+	width: auto;
+}
+
+.vegasStr {
+margin: 50px 0 50px 8vw;
+}
+.vegas-page {
+	background-color: white;
+	color: black;
+}
+.vegas-page img {
+	height: 100%;
+	width: auto;
+}
+
+.libraryBan {
+margin: 50px 0 50px 8vw;
+}
+.banner-page {
+	background-color: white;
+	color: black;
+}
+.banner-page img {
+	height: 100%;
+	width: auto;
+}
 
 /* coastal */
 .coastalBook {

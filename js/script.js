@@ -162,3 +162,39 @@ const wwPdam = new St.PageFlip(document.getElementById('WW2018'),
 );
 
 wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
+
+// vegas night
+
+const vegasStr = new St.PageFlip(document.getElementById('vegasStr'), 
+    {
+        width: 517, // required parameter - base page width
+        height: 800,  // required parameter - base page height
+        minWidth: 517,
+        minHeight: 800,
+        maxWidth: 517,
+        maxHeight: 800,
+        showCover: true,
+        size:("stretch"),
+        usePortrait: false
+    }
+);
+
+vegasStr.loadFromHTML(document.querySelectorAll('.vegas-page'));
+
+// Library Banners
+
+const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
+    {
+        width: 517, // required parameter - base page width
+        height: 800,  // required parameter - base page height
+        minWidth: 517,
+        minHeight: 800,
+        maxWidth: 517,
+        maxHeight: 800,
+        showCover: true,
+        size:("stretch"),
+        usePortrait: false
+    }
+);
+
+libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
