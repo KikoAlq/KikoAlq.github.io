@@ -17,6 +17,9 @@ body {
 p {
 	margin: 0;
 }
+a {
+	color: white;
+}
 a:visited {
 	color: none;
 }
@@ -213,6 +216,10 @@ p.scroll-text {
   height: 100%;
   width: auto;
 }
+.book-wrapper .lokoFilter {
+	height: 800px;
+	width: auto;
+  }
 .descText h2 {
   font-size: 2rem;
 }
@@ -229,7 +236,22 @@ p.scroll-text {
   margin-bottom: 50px;
 }
 .descText .interactWith {
-	margin: 0 0 0 900px;
+	margin: 0 0 0 1230px;
+}
+.descText .interactBanners {
+	margin: 0 0 0 485px;
+}
+.descText .interactVegas {
+	margin: 0 0 0 950px;
+}
+.descText .interactFilters {
+	margin: 0 0 0 680px;
+}
+.descText .interactWanted {
+	margin: 0 0 0 945px;
+}
+.descText .interactCoastal {
+	margin: 0 0 0 1200px;
 }
 /* for each book */
 
@@ -267,6 +289,18 @@ margin: 50px 0 50px 8vw;
 	color: black;
 }
 .banner-page img {
+	height: 100%;
+	width: auto;
+}
+
+.lokoFilter {
+	margin: 50px 0 50px 8vw;
+}
+.filter-page {
+	background-color: none;
+	color: black;
+}
+.filter-page img {
 	height: 100%;
 	width: auto;
 }

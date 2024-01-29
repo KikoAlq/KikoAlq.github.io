@@ -185,11 +185,11 @@ vegasStr.loadFromHTML(document.querySelectorAll('.vegas-page'));
 
 const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
     {
-        width: 517, // required parameter - base page width
+        width: 285, // required parameter - base page width
         height: 800,  // required parameter - base page height
-        minWidth: 517,
+        minWidth: 285,
         minHeight: 800,
-        maxWidth: 517,
+        maxWidth: 285,
         maxHeight: 800,
         showCover: true,
         size:("stretch"),
@@ -198,3 +198,22 @@ const libraryBan = new St.PageFlip(document.getElementById('libraryBan'),
 );
 
 libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
+
+// LOKO Snapchat Filters
+
+const lokoFilter = new St.PageFlip(document.getElementById('lokoFilter'), 
+    {
+        width: 400, // required parameter - base page width
+        height: 800,  // required parameter - base page height
+        minWidth: 400,
+        minHeight: 800,
+        maxWidth: 400,
+        maxHeight: 800,
+        showCover: true,
+        size:("stretch"),
+        usePortrait: false,
+        drawShadow: false
+    }
+);
+
+lokoFilter.loadFromHTML(document.querySelectorAll('.filter-page'));
