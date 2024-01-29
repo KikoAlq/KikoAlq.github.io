@@ -32,6 +32,9 @@ a:visited {
 	margin: 5vh 5vw;
 }
 .navbar {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
   overflow-x: hidden;
 	position: fixed;
 	height: 100vh;
