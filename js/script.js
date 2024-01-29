@@ -10,15 +10,15 @@ let printPrev = document.getElementById("printPrev")
 let posterPrev = document.getElementById("posterPrev")
 let illusPrev = document.getElementById("illusPrev")
 
-function openNav() {
-  document.getElementById("sidenav").style.width = "10vw"
-  document.getElementById("wrapper").style.marginLeft = "10vw"
-}
+// function openNav() {
+//   document.getElementById("sidenav").style.width = "10vw"
+//   document.getElementById("wrapper").style.marginLeft = "10vw"
+// }
 
-function closeNav() {
-  document.getElementById("sidenav").style.width = "0"
-  document.getElementById("wrapper").style.marginLeft = "0"
-}
+// function closeNav() {
+//   document.getElementById("sidenav").style.width = "0"
+//   document.getElementById("wrapper").style.marginLeft = "0"
+// }
 
 // ~500px media selector overlay navbar not push margins
 // media selector to make mobile navbar overlay dissappear
@@ -76,7 +76,6 @@ function viewillusPrev() {
 
 function preview(lastClicked) {
   document.getElementById("sidenav").style.width = "10vw"
-  document.getElementById("closeBtn").style.opacity = "0"
   document.getElementById("wrapper").style.marginLeft = "10vw"
   document.getElementById("wrapper").style.display = "none"
   document.getElementById("btns1").style.display = "none"
@@ -113,7 +112,6 @@ function closePreview() {
   document.getElementById("previewPrt").style.width = "0"
   document.getElementById("previewPos").style.width = "0"
   document.getElementById("previewIll").style.width = "0"
-  document.getElementById("closeBtn").style.opacity = "100%"
   document.getElementById("wrapper").style.display = "block"
   document.getElementById("btns1").style.display = "flex"
   document.getElementById("btns2").style.display = "none"
