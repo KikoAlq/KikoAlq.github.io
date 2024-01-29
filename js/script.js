@@ -30,40 +30,51 @@ function closeNav() {
 function viewTop() {
   topSec.scrollIntoView({behavior: "smooth"})
 }
-
 function viewinternSec() {
   internSec.scrollIntoView({behavior: "smooth"})
-
 }
-function viewinternPrev() {
-  internPrev.scrollIntoView({behavior: "instant"})
-}
-
 function viewprintSec() {
   printSec.scrollIntoView({behavior: "smooth"})
 }
-function viewprintPrev() {
-  printPrev.scrollIntoView({behavior: "instant"})
-}
-
 function viewposterSec() {
   posterSec.scrollIntoView({behavior: "smooth"})
 }
-function viewposterPrev() {
-  posterPrev.scrollIntoView({behavior: "instant"})
-}
-
 function viewillusSec() {
   illusSec.scrollIntoView({behavior: "smooth"})
 }
+
+
+function viewinternPrev() {
+  internPrev.scrollIntoView({behavior: "instant"})
+  document.getElementById("previewSec").style.width = "90vw"
+  document.getElementById("previewPrt").style.width = "0"
+  document.getElementById("previewPos").style.width = "0"
+  document.getElementById("previewIll").style.width = "0"
+}
+function viewposterPrev() {
+  posterPrev.scrollIntoView({behavior: "instant"})
+  document.getElementById("previewSec").style.width = "0"
+  document.getElementById("previewPrt").style.width = "0"
+  document.getElementById("previewPos").style.width = "90vw"
+  document.getElementById("previewIll").style.width = "0"
+}
+function viewprintPrev() {
+  printPrev.scrollIntoView({behavior: "instant"})
+  document.getElementById("previewSec").style.width = "0"
+  document.getElementById("previewPrt").style.width = "90vw"
+  document.getElementById("previewPos").style.width = "0"
+  document.getElementById("previewIll").style.width = "0"
+}
 function viewillusPrev() {
   illusPrev.scrollIntoView({behavior: "instant"})
+  document.getElementById("previewSec").style.width = "0"
+  document.getElementById("previewPrt").style.width = "0"
+  document.getElementById("previewPos").style.width = "0"
+  document.getElementById("previewIll").style.width = "90vw"
 }
-
 //  preview
 
 function preview(lastClicked) {
-  document.getElementById("previewSec").style.width = "90vw"
   document.getElementById("sidenav").style.width = "10vw"
   document.getElementById("closeBtn").style.opacity = "0"
   document.getElementById("wrapper").style.marginLeft = "10vw"
@@ -75,19 +86,22 @@ function preview(lastClicked) {
   for (var i = 0; i < ovr.length; i++) {
     var currOvr = ovr[i]
     currOvr.style.display = "none"
-  } 
-  console.log(lastClicked)
+  }
   switch(lastClicked) {
     case lastClicked = "internSec":
+      document.getElementById("previewSec").style.width = "90vw"
       viewinternPrev()
       break;
     case lastClicked = "printSec":
+      document.getElementById("previewPrt").style.width = "90vw"
       viewprintPrev()
       break;
     case lastClicked = "posterSec":
+      document.getElementById("previewPos").style.width = "90vw"
       posterPrev.scrollIntoView()
       break;
     case lastClicked = "illusSec":
+      document.getElementById("previewIll").style.width = "90vw"
       illusPrev.scrollIntoView()
       break;
   }
@@ -96,6 +110,9 @@ function preview(lastClicked) {
 
 function closePreview() {
   document.getElementById("previewSec").style.width = "0"
+  document.getElementById("previewPrt").style.width = "0"
+  document.getElementById("previewPos").style.width = "0"
+  document.getElementById("previewIll").style.width = "0"
   document.getElementById("closeBtn").style.opacity = "100%"
   document.getElementById("wrapper").style.display = "block"
   document.getElementById("btns1").style.display = "flex"
