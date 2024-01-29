@@ -32,7 +32,7 @@ function viewTop() {
 }
 
 function viewinternSec() {
-  internSec.scrollIntoView({behavior: "smooth"})
+  internSec.scrollIntoView({behavior: "smooth", block: "center"})
 
 }
 function viewinternPrev() {
@@ -40,21 +40,21 @@ function viewinternPrev() {
 }
 
 function viewprintSec() {
-  printSec.scrollIntoView({behavior: "smooth"})
+  printSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewprintPrev() {
   printPrev.scrollIntoView({behavior: "smooth"})
 }
 
 function viewposterSec() {
-  posterSec.scrollIntoView({behavior: "smooth"})
+  posterSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewposterPrev() {
   posterPrev.scrollIntoView({behavior: "smooth"})
 }
 
 function viewillusSec() {
-  illusSec.scrollIntoView({behavior: "smooth"})
+  illusSec.scrollIntoView({behavior: "smooth", block: "center"})
 }
 function viewillusPrev() {
   illusPrev.scrollIntoView({behavior: "smooth"})

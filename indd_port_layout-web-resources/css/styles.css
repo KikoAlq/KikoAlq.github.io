@@ -141,10 +141,11 @@ p.scroll-text {
 /* -portfolio section */
 
 .port-grid {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+	font-family: "Helvetica", "Arial", "sans-serif";
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-auto-rows: 100vh;
+  align-items: end;
   width: auto;
 	margin: 0 0 0 100px;
 	grid-column-gap: 50px;
@@ -159,7 +160,7 @@ p.scroll-text {
 }
 .thumbnail img {
 	max-width: 400px;
-  margin: 25vh 0 0;
+  margin: 20px 0 0;
 	box-shadow: 5px 5px 25px 5px black;
   transition: 1s;
 }
@@ -177,17 +178,23 @@ p.scroll-text {
   opacity: 1;
 }
 .port-details{
+  max-width: 1000px;
+	padding: 30px;
   display: inline;
   align-self: stretch;
   margin: 25vh 0 25vh;
+  background-color: rgba(24, 24, 24, 0.3);
 }
-.port-details p {
-	font-size: 2rem;
-}
+
 .port-details h3 {
   margin: 0;
 	font-size: 4rem;
 	line-height: 1;
+}
+.port-details p {
+	font-size: 2rem;
+	line-height: 1.5;
+	margin: 20px 100px 20px 0;
 }
 .small-detail {
   padding-top: 130px;
@@ -220,6 +227,9 @@ p.scroll-text {
 	height: 800px;
 	width: auto;
   }
+.oldCoastal {
+	background-color: white;
+}
 .descText h2 {
   font-size: 2rem;
 }
@@ -339,9 +349,16 @@ margin: 50px 0 50px 8vw;
   flex-shrink: 0;
 	margin: 25vh 50px 0;
 	padding: 0 50px 5px;
-	height: 20px;
+	height: 60px;
 	font-size: 12px;
 	line-height: .05;
+}
+.mainfoot h2 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+.mainfoot p {
+  font-size: 2rem;
 }
 .attr-foot {
 	float: right;
