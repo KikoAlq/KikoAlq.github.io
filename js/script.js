@@ -12,8 +12,8 @@ let illusPrev = document.getElementById("illusPrev")
 
 // media query implementation
 
-var textQuery = window.matchMedia("(max-width: 1170px)")
-var coastalQuery = window.matchMedia("(max-width: 1800px)")
+const tabletQuery = window.matchMedia("(max-width: 1170px)")
+const coastalQuery = window.matchMedia("(max-width: 1800px)")
 
 // function openNav() {
 //   document.getElementById("sidenav").style.width = "10vw"
@@ -77,6 +77,7 @@ function viewillusPrev() {
   document.getElementById("previewPos").style.width = "0"
   document.getElementById("previewIll").style.width = "90vw"
 }
+
 //  preview
 
 function preview(lastClicked) {
@@ -92,20 +93,20 @@ function preview(lastClicked) {
   }
   switch(lastClicked) {
     case lastClicked = "internSec":
-      document.getElementById("previewSec").style.width = "90vw"
+      // document.getElementById("previewSec").style.width = "90vw"
       viewinternPrev()
       break;
     case lastClicked = "printSec":
-      document.getElementById("previewPrt").style.width = "90vw"
+      // document.getElementById("previewPrt").style.width = "90vw"
       viewprintPrev()
       break;
     case lastClicked = "posterSec":
-      document.getElementById("previewPos").style.width = "90vw"
-      posterPrev.scrollIntoView()
+      // document.getElementById("previewPos").style.width = "90vw"
+      viewposterPrev()
       break;
     case lastClicked = "illusSec":
-      document.getElementById("previewIll").style.width = "90vw"
-      illusPrev.scrollIntoView()
+      // document.getElementById("previewIll").style.width = "90vw"
+      viewillusPrev()
       break;
   }
   linkTab = document.getElementById(lastClicked)
@@ -132,19 +133,20 @@ function closePreview() {
 
 // coastal
 
-let pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
-    {
-      width: 500, // required parameter - base page width
-      height: 388,  // required parameter - base page height
-      minWidth: 500,
-      minHeight: 388,
-      maxWidth: 500,
-      maxHeight: 388,
-      showCover: true,
-      size:("stretch"),
-      usePortrait: false
-    }
-)
+// let pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
+//     {
+//       width: 500, // required parameter - base page width
+//       height: 388,  // required parameter - base page height
+//       minWidth: 500,
+//       minHeight: 388,
+//       maxWidth: 500,
+//       maxHeight: 388,
+//       showCover: true,
+//       size:("stretch"),
+//       usePortrait: false
+//     }
+// )
+// pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
 // media query
 
@@ -160,9 +162,10 @@ function coastalMedia(x) {
           maxHeight: 388,
           showCover: true,
           size:("stretch"),
-          usePortrait: false
+          usePortrait: true
       }
     )
+    pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
   } else {
     pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
       {
@@ -177,6 +180,7 @@ function coastalMedia(x) {
           usePortrait: false
       }
     )
+    pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
   }
 }
 
@@ -186,7 +190,7 @@ coastalQuery.addEventListener("change", function() {
   coastalMedia(coastalQuery)
 })
 
-pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+
 
 // wanted
 
