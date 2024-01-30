@@ -10,6 +10,11 @@ let printPrev = document.getElementById("printPrev")
 let posterPrev = document.getElementById("posterPrev")
 let illusPrev = document.getElementById("illusPrev")
 
+// media query implementation
+
+var textQuery = window.matchMedia("(max-width: 1170px)")
+var coastalQuery = window.matchMedia("(max-width: 1800px)")
+
 // function openNav() {
 //   document.getElementById("sidenav").style.width = "10vw"
 //   document.getElementById("wrapper").style.marginLeft = "10vw"
@@ -127,19 +132,59 @@ function closePreview() {
 
 // coastal
 
-const pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
+let pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
     {
-        width: 645, // required parameter - base page width
-        height: 500,  // required parameter - base page height
-        minWidth: 645,
-        minHeight: 500,
-        maxWidth: 645,
-        maxHeight: 500,
-        showCover: true,
-        size:("stretch"),
-        usePortrait: false
+      width: 500, // required parameter - base page width
+      height: 388,  // required parameter - base page height
+      minWidth: 500,
+      minHeight: 388,
+      maxWidth: 500,
+      maxHeight: 388,
+      showCover: true,
+      size:("stretch"),
+      usePortrait: false
     }
-);
+)
+
+// media query
+
+function coastalMedia(x) {
+  if (x.matches) {
+    pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
+      {
+          width: 500, // required parameter - base page width
+          height: 388,  // required parameter - base page height
+          minWidth: 500,
+          minHeight: 388,
+          maxWidth: 500,
+          maxHeight: 388,
+          showCover: true,
+          size:("stretch"),
+          usePortrait: false
+      }
+    )
+  } else {
+    pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
+      {
+          width: 645, // required parameter - base page width
+          height: 500,  // required parameter - base page height
+          minWidth: 645,
+          minHeight: 500,
+          maxWidth: 645,
+          maxHeight: 500,
+          showCover: true,
+          size:("stretch"),
+          usePortrait: false
+      }
+    )
+  }
+}
+
+coastalMedia(coastalQuery);
+
+coastalQuery.addEventListener("change", function() {
+  coastalMedia(coastalQuery)
+})
 
 pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
 
@@ -234,3 +279,5 @@ const lokoFilter = new St.PageFlip(document.getElementById('lokoFilter'),
 );
 
 lokoFilter.loadFromHTML(document.querySelectorAll('.filter-page'));
+
+
