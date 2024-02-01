@@ -10,11 +10,6 @@ let printPrev = document.getElementById("printPrev")
 let posterPrev = document.getElementById("posterPrev")
 let illusPrev = document.getElementById("illusPrev")
 
-// media query implementation
-
-const tabletQuery = window.matchMedia("(max-width: 1170px)")
-const coastalQuery = window.matchMedia("(max-width: 1800px)")
-
 // function openNav() {
 //   document.getElementById("sidenav").style.width = "10vw"
 //   document.getElementById("wrapper").style.marginLeft = "10vw"
@@ -51,7 +46,7 @@ function viewillusSec() {
 
 function viewinternPrev() {
   internPrev.scrollIntoView({behavior: "instant"})
-  document.getElementById("previewSec").style.width = "90vw"
+  document.getElementById("previewSec").style.width = "100%"
   document.getElementById("previewPrt").style.width = "0"
   document.getElementById("previewPos").style.width = "0"
   document.getElementById("previewIll").style.width = "0"
@@ -60,13 +55,13 @@ function viewposterPrev() {
   posterPrev.scrollIntoView({behavior: "instant"})
   document.getElementById("previewSec").style.width = "0"
   document.getElementById("previewPrt").style.width = "0"
-  document.getElementById("previewPos").style.width = "90vw"
+  document.getElementById("previewPos").style.width = "100%"
   document.getElementById("previewIll").style.width = "0"
 }
 function viewprintPrev() {
   printPrev.scrollIntoView({behavior: "instant"})
   document.getElementById("previewSec").style.width = "0"
-  document.getElementById("previewPrt").style.width = "90vw"
+  document.getElementById("previewPrt").style.width = "100%"
   document.getElementById("previewPos").style.width = "0"
   document.getElementById("previewIll").style.width = "0"
 }
@@ -75,17 +70,17 @@ function viewillusPrev() {
   document.getElementById("previewSec").style.width = "0"
   document.getElementById("previewPrt").style.width = "0"
   document.getElementById("previewPos").style.width = "0"
-  document.getElementById("previewIll").style.width = "90vw"
+  document.getElementById("previewIll").style.width = "100%"
 }
 
 //  preview
 
 function preview(lastClicked) {
-  document.getElementById("wrapper").style.marginLeft = "10vw"
+  // document.getElementById("wrapper").style.marginLeft = "10vw"
   document.getElementById("wrapper").style.display = "none"
-  document.getElementById("btns1").style.display = "none"
-  document.getElementById("btns2").style.display = "flex"
-  document.getElementById("sidenav").style.backgroundColor = "rgb(69,69,69)"
+  // document.getElementById("btns1").style.display = "none"
+  // document.getElementById("btns2").style.display = "flex"
+  // document.getElementById("sidenav").style.backgroundColor = "rgb(69,69,69)"
   var ovr = document.querySelectorAll("#overlay")
   for (var i = 0; i < ovr.length; i++) {
     var currOvr = ovr[i]
@@ -118,15 +113,19 @@ function closePreview() {
   document.getElementById("previewPos").style.width = "0"
   document.getElementById("previewIll").style.width = "0"
   document.getElementById("wrapper").style.display = "block"
-  document.getElementById("btns1").style.display = "flex"
-  document.getElementById("btns2").style.display = "none"
-  document.getElementById("sidenav").style.backgroundColor = "#111"
-  var ovr = document.querySelectorAll("#overlay")
-  for (var i = 0; i < ovr.length; i++) {
-    var currOvr = ovr[i]
-    currOvr.style.display = "block"
-  }
-  linkTab.scrollIntoView()
+  internSec.scrollIntoView()
+
+
+  // document.getElementById("btns1").style.display = "flex"
+  // document.getElementById("btns2").style.display = "none"
+  // document.getElementById("sidenav").style.backgroundColor = "#111"
+
+  // var ovr = document.querySelectorAll("#overlay")
+  // for (var i = 0; i < ovr.length; i++) {
+  //   var currOvr = ovr[i]
+  //   currOvr.style.display = "block"
+  // }
+  // linkTab.scrollIntoView()
 }
 
 // books
@@ -150,16 +149,24 @@ function closePreview() {
 
 // media query
 
+const mobileQuery = window.matchMedia("(max-width: 1170px)")
+const coastalQuery = window.matchMedia("(max-width: 1800px)")
+
+// mobileMedia(mobileQuery);
+// mobileQuery.addEventListener("change", function() {
+//   mobileMedia(mobileQuery)
+// }
+
 function coastalMedia(x) {
   if (x.matches) {
     pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
       {
-          width: 500, // required parameter - base page width
-          height: 388,  // required parameter - base page height
-          minWidth: 500,
-          minHeight: 388,
-          maxWidth: 500,
-          maxHeight: 388,
+          width: 750, // required parameter - base page width
+          height: 581,  // required parameter - base page height
+          minWidth: 750,
+          minHeight: 581,
+          maxWidth: 750,
+          maxHeight: 581,
           showCover: true,
           size:("stretch"),
           usePortrait: true
@@ -212,21 +219,62 @@ wantedMag.loadFromHTML(document.querySelectorAll('.wanted-page'));
 
 // welcome weekend
 
-const wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
-    {
-        width: 494, // required parameter - base page width
-        height: 600,  // required parameter - base page height
-        minWidth: 494,
-        minHeight: 600,
-        maxWidth: 494,
-        maxHeight: 600,
-        showCover: true,
-        size:("stretch"),
-        usePortrait: false
-    }
-);
+// const wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
+//     {
+//         width: 494, // required parameter - base page width
+//         height: 600,  // required parameter - base page height
+//         minWidth: 494,
+//         minHeight: 600,
+//         maxWidth: 494,
+//         maxHeight: 600,
+//         showCover: true,
+//         size:("stretch"),
+//         usePortrait: false
+//     }
+// );
 
-wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
+
+
+// wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
+
+function welcomeMedia(x) {
+  if (x.matches) {
+    wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
+      {
+          width: 659, // required parameter - base page width
+          height: 800,  // required parameter - base page height
+          minWidth: 659,
+          minHeight: 800,
+          maxWidth: 659,
+          maxHeight: 800,
+          showCover: true,
+          size:("stretch"),
+          usePortrait: true
+      }
+    )
+    wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
+  } else {
+    wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
+      {
+          width: 494, // required parameter - base page width
+          height: 600,  // required parameter - base page height
+          minWidth: 494,
+          minHeight: 600,
+          maxWidth: 494,
+          maxHeight: 600,
+          showCover: true,
+          size:("stretch"),
+          usePortrait: false
+      }
+    )
+    wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
+  }
+}
+
+welcomeMedia(mobileQuery);
+mobileQuery.addEventListener("change", function() {
+  welcomeMedia(mobileQuery)
+})
 
 // vegas night
 
@@ -248,21 +296,58 @@ vegasStr.loadFromHTML(document.querySelectorAll('.vegas-page'));
 
 // Library Banners
 
-const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
-    {
-        width: 214, // required parameter - base page width
-        height: 600,  // required parameter - base page height
-        minWidth: 214,
-        minHeight: 600,
-        maxWidth: 214,
-        maxHeight: 600,
-        showCover: true,
-        size:("stretch"),
-        usePortrait: false
-    }
-);
+// const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
+//     {
+//         width: 214, // required parameter - base page width
+//         height: 600,  // required parameter - base page height
+//         minWidth: 214,
+//         minHeight: 600,
+//         maxWidth: 214,
+//         maxHeight: 600,
+//         showCover: true,
+//         size:("stretch"),
+//         usePortrait: false
+//     }
+// );
 
-libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
+// libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
+
+function bannerMedia(x) {
+  if (x.matches) {
+    libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
+        {
+            width: 428, // required parameter - base page width
+            height: 1200,  // required parameter - base page height
+            minWidth: 428,
+            minHeight: 1200,
+            showCover: true,
+            size:("stretch"),
+            usePortrait: true
+        }
+    );
+    libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
+  } else {
+    libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
+        {
+            width: 214, // required parameter - base page width
+            height: 600,  // required parameter - base page height
+            minWidth: 214,
+            minHeight: 600,
+            maxWidth: 214,
+            maxHeight: 600,
+            showCover: true,
+            size:("stretch"),
+            usePortrait: false
+        }
+    );
+    libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
+  }
+}
+
+bannerMedia(mobileQuery);
+mobileQuery.addEventListener("change", function() {
+  bannerMedia(mobileQuery)
+})
 
 // LOKO Snapchat Filters
 
