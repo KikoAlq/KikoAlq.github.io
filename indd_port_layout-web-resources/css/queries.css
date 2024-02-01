@@ -1,3 +1,133 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 40px) and (max-width: 1000px) {
+  
+  /* -global */
+  
+  html, body {
+    font-size: 15px;
+  }
+  body {
+    margin: 0;
+  }
 
+  /* -Main -Top of Page */
+  
+  .wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* -title section */
+  
+  div.title {
+    margin: 30vh 0 0;
+  }
+  p.title-bottom {
+    font-size: 3.5rem;
+  }
+  
+  /* -portfolio section */
+  
+  .port-grid {
+    margin-top: 25vh;
+    grid-template-columns: repeat(1, 1fr 1fr);
+    column-gap: 0;
+    row-gap: 3vh;
+    height: 100%;
+  }
+  .thumbnail {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .overlay p {
+    transform: translate(15vw, 15vw);
+    position: fixed;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+  }
+  .port-details {
+    box-sizing: border-box;
+    display: block;
+    width: 50vw;
+    height: 100%;
+  }
+  
+  /* -preview section */
+
+  .previewSec div {
+    padding: 2vh 2vw;
+  }
+  .previewSec h2:first-of-type {
+    padding-top: 0;
+  }
+
+  #closePreview {
+    position: fixed;
+    margin: 1vh 4vw
+  }
+  .book-wrapper {
+    height: 50%;
+    width: auto;
+    background-color: #a0a0a0;
+  }
+  .book-wrapper div {
+    padding: 0;
+  }
+  .book-wrapper .WW2018 {
+    height: 0;
+    margin-left: 12vw;
+  }
+  .book-wrapper .libraryBan {
+    height: 0;
+    margin-left: 23vw;
+  }
+  .book-wrapper .lokoFilter {
+    max-height: 90%;
+    width: auto;
+  }
+  .oldCoastal {
+    background-color: white;
+  }
+  .descText h2 {
+    font-size: 2.5rem;
+    padding-top: 0;
+  }
+  h2:first-of-type {
+    padding-top: 2vh;
+  }
+  .descText p {
+    font-size: 1.5em;
+    padding: 2vh 2vw;
+    width: 85vw;
+    margin: inherit;
+  }
+  .descText {
+     margin: 0; 
+  }
+  .descText img {
+    max-height: auto;
+    width: 90%;
+    height: auto;
+    margin: 2vh 2vw;
+    vertical-align: middle;
+  }
 }
