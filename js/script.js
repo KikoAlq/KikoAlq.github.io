@@ -1,4 +1,5 @@
 // navigation
+let linkTab = document.getElementById("topSec")
 
 let topSec = document.getElementById("topSec")
 let internSec = document.getElementById("internSec")
@@ -9,6 +10,8 @@ let internPrev = document.getElementById("internPrev")
 let printPrev = document.getElementById("printPrev")
 let posterPrev = document.getElementById("posterPrev")
 let illusPrev = document.getElementById("illusPrev")
+const mobileQuery = window.matchMedia("(max-width: 1170px)")
+const coastalQuery = window.matchMedia("(max-width: 1800px)")
 
 // function openNav() {
 //   document.getElementById("sidenav").style.width = "10vw"
@@ -107,55 +110,46 @@ function preview(lastClicked) {
   linkTab = document.getElementById(lastClicked)
 }
 
-function closePreview() {
-  document.getElementById("previewSec").style.width = "0"
-  document.getElementById("previewPrt").style.width = "0"
-  document.getElementById("previewPos").style.width = "0"
-  document.getElementById("previewIll").style.width = "0"
-  document.getElementById("wrapper").style.display = "block"
-  internSec.scrollIntoView()
 
 
-  // document.getElementById("btns1").style.display = "flex"
-  // document.getElementById("btns2").style.display = "none"
-  // document.getElementById("sidenav").style.backgroundColor = "#111"
-
-  // var ovr = document.querySelectorAll("#overlay")
-  // for (var i = 0; i < ovr.length; i++) {
-  //   var currOvr = ovr[i]
-  //   currOvr.style.display = "block"
-  // }
-  // linkTab.scrollIntoView()
+function closePreview(x) {
+  if (x.matches) {
+    document.getElementById("previewSec").style.width = "0"
+    document.getElementById("previewPrt").style.width = "0"
+    document.getElementById("previewPos").style.width = "0"
+    document.getElementById("previewIll").style.width = "0"
+    document.getElementById("wrapper").style.display = "block"
+    internSec.scrollIntoView()
+  } else {
+    document.getElementById("previewSec").style.width = "0"
+    document.getElementById("previewPrt").style.width = "0"
+    document.getElementById("previewPos").style.width = "0"
+    document.getElementById("previewIll").style.width = "0"
+    document.getElementById("wrapper").style.display = "block"
+    document.getElementById("btns1").style.display = "flex"
+    document.getElementById("btns2").style.display = "none"
+    document.getElementById("sidenav").style.backgroundColor = "#111"
+  
+    var ovr = document.querySelectorAll("#overlay")
+    for (var i = 0; i < ovr.length; i++) {
+      var currOvr = ovr[i]
+      currOvr.style.display = "block"
+    }
+    linkTab.scrollIntoView()
+  }
 }
+
+closePreview(mobileQuery);
+
+mobileQuery.addEventListener("change", function() {
+  closePreview(mobileQuery)
+})
+
+
 
 // books
 
 // coastal
-
-// let pageFlip = new St.PageFlip(document.getElementById('coastalBook'), 
-//     {
-//       width: 500, // required parameter - base page width
-//       height: 388,  // required parameter - base page height
-//       minWidth: 500,
-//       minHeight: 388,
-//       maxWidth: 500,
-//       maxHeight: 388,
-//       showCover: true,
-//       size:("stretch"),
-//       usePortrait: false
-//     }
-// )
-// pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
-
-// media query
-
-const mobileQuery = window.matchMedia("(max-width: 1170px)")
-const coastalQuery = window.matchMedia("(max-width: 1800px)")
-
-// mobileMedia(mobileQuery);
-// mobileQuery.addEventListener("change", function() {
-//   mobileMedia(mobileQuery)
-// }
 
 function coastalMedia(x) {
   if (x.matches) {
@@ -219,24 +213,6 @@ wantedMag.loadFromHTML(document.querySelectorAll('.wanted-page'));
 
 // welcome weekend
 
-// const wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
-//     {
-//         width: 494, // required parameter - base page width
-//         height: 600,  // required parameter - base page height
-//         minWidth: 494,
-//         minHeight: 600,
-//         maxWidth: 494,
-//         maxHeight: 600,
-//         showCover: true,
-//         size:("stretch"),
-//         usePortrait: false
-//     }
-// );
-
-
-
-// wwPdam.loadFromHTML(document.querySelectorAll('.welcome-page'));
-
 function welcomeMedia(x) {
   if (x.matches) {
     wwPdam = new St.PageFlip(document.getElementById('WW2018'), 
@@ -295,22 +271,6 @@ const vegasStr = new St.PageFlip(document.getElementById('vegasStr'),
 vegasStr.loadFromHTML(document.querySelectorAll('.vegas-page'));
 
 // Library Banners
-
-// const libraryBan = new St.PageFlip(document.getElementById('libraryBan'), 
-//     {
-//         width: 214, // required parameter - base page width
-//         height: 600,  // required parameter - base page height
-//         minWidth: 214,
-//         minHeight: 600,
-//         maxWidth: 214,
-//         maxHeight: 600,
-//         showCover: true,
-//         size:("stretch"),
-//         usePortrait: false
-//     }
-// );
-
-// libraryBan.loadFromHTML(document.querySelectorAll('.banner-page'));
 
 function bannerMedia(x) {
   if (x.matches) {
