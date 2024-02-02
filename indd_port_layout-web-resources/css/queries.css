@@ -97,11 +97,11 @@
     padding: 0;
   }
   .book-wrapper .WW2018 {
-    height: 0;
+    height: 1px;
     margin-left: 12vw;
   }
   .book-wrapper .libraryBan {
-    height: 0;
+    height: 1px;
     margin-left: 23vw;
   }
   .book-wrapper .lokoFilter {
