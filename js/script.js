@@ -10,7 +10,11 @@ let internPrev = document.getElementById("internPrev")
 let printPrev = document.getElementById("printPrev")
 let posterPrev = document.getElementById("posterPrev")
 let illusPrev = document.getElementById("illusPrev")
+
+
 const mobileQuery = window.matchMedia("(max-width: 1170px)")
+let prevVar = "who"
+
 const coastalQuery = window.matchMedia("(max-width: 1800px)")
 
 // function openNav() {
@@ -78,6 +82,15 @@ function viewillusPrev() {
 
 //  preview
 
+function preview(x) {
+  if (x.matches) {
+    console.log("yay!")
+  } else {
+    console.log("wait what")
+  }
+  console.log(mobileQuery)
+}
+
 function preview(lastClicked) {
   // document.getElementById("wrapper").style.marginLeft = "10vw"
   document.getElementById("wrapper").style.display = "none"
@@ -112,8 +125,24 @@ function preview(lastClicked) {
 
 
 
-function closePreview(x) {
+function closeSelect(x) {
   if (x.matches) {
+    prevVar = "goo"
+    console.log(prevVar)
+  } else {
+    prevVar = "boo"
+    console.log(prevVar)
+  }
+}
+
+closeSelect(mobileQuery);
+
+mobileQuery.addEventListener("change", function() {
+  closeSelect(mobileQuery)
+})
+
+function closePreview(prevVar) {
+  if (prevVar = "goo") {
     document.getElementById("previewSec").style.width = "0"
     document.getElementById("previewPrt").style.width = "0"
     document.getElementById("previewPos").style.width = "0"
@@ -129,21 +158,15 @@ function closePreview(x) {
     document.getElementById("btns1").style.display = "flex"
     document.getElementById("btns2").style.display = "none"
     document.getElementById("sidenav").style.backgroundColor = "#111"
-  
-    var ovr = document.querySelectorAll("#overlay")
-    for (var i = 0; i < ovr.length; i++) {
-      var currOvr = ovr[i]
-      currOvr.style.display = "block"
-    }
-    linkTab.scrollIntoView()
   }
 }
 
-closePreview(mobileQuery);
-
-mobileQuery.addEventListener("change", function() {
-  closePreview(mobileQuery)
-})
+// var ovr = document.querySelectorAll("#overlay")
+// for (var i = 0; i < ovr.length; i++) {
+//   var currOvr = ovr[i]
+//   currOvr.style.display = "block"
+// }
+// linkTab.scrollIntoView()
 
 
 
