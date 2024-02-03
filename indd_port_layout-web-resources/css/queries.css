@@ -74,6 +74,12 @@
     width: 50vw;
     height: 100%;
   }
+  p.potsdam-desc {
+    display: none;
+  }
+  p.potsdam-desc2 {
+    display: block;
+  }
   
   /* -preview section */
 
