@@ -360,3 +360,22 @@ margin: 50px 0 50px 8vw;
 .attr-foot {
 	float: right;
 }
+/* -media queries */
+
+/*
+breakpoints:
+
+title
+	500px mobile size ~2em
+
+navbar
+  500px set preview to landscape ??
+port section
+  500px
+    stack img on text
+
+book preview
+  1300px
+    scale size
+  500px scale size
+*/
