@@ -124,7 +124,11 @@ function preview(lastClicked) {
     document.getElementById("wrapper").style.display = "none"
     document.getElementById("btns1").style.display = "none"
     document.getElementById("btns2").style.display = "flex"
-    document.getElementById("sidenav").style.backgroundColor = "rgb(69,69,69)"
+    var naveach = document.querySelectorAll(".navbtn")
+    for (var i = 0; i < naveach.length; i++) {
+      var currNav = naveach[i]
+      currNav.style.backgroundColor = "#111111af"
+    }
     var ovr = document.querySelectorAll("#overlay")
     for (var i = 0; i < ovr.length; i++) {
       var currOvr = ovr[i]
@@ -150,15 +154,25 @@ function preview(lastClicked) {
   linkTab = document.getElementById(lastClicked)
 }
 
-function closePreview(prevVar) {
-  if (prevVar = "goo") {
+function closePreview() {
+  if (prevVar === "goo") {
     document.getElementById("previewSec").style.width = "0"
     document.getElementById("previewPrt").style.width = "0"
     document.getElementById("previewPos").style.width = "0"
     document.getElementById("previewIll").style.width = "0"
     document.getElementById("wrapper").style.display = "block"
     internSec.scrollIntoView()
-  } else if (prevVar = "boo") {
+  } else if (prevVar === "boo") {
+    var navcls = document.querySelectorAll(".navbtn")
+    for (var i = 0; i < navcls.length; i++) {
+      var currNavcls = navcls[i]
+      currNavcls.style.backgroundColor = "#1111116b"
+    }
+    var ovr = document.querySelectorAll("#overlay")
+    for (var i = 0; i < ovr.length; i++) {
+      var currOvr = ovr[i]
+      currOvr.style.display = "block"
+    }
     document.getElementById("previewSec").style.width = "0"
     document.getElementById("previewPrt").style.width = "0"
     document.getElementById("previewPos").style.width = "0"
@@ -166,7 +180,7 @@ function closePreview(prevVar) {
     document.getElementById("wrapper").style.display = "block"
     document.getElementById("btns1").style.display = "flex"
     document.getElementById("btns2").style.display = "none"
-    document.getElementById("sidenav").style.backgroundColor = "#111"
+    linkTab.scrollIntoView()
   } else {
     console.log("something is afoot here")
   }
