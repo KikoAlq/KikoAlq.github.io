@@ -74,8 +74,6 @@ function preview(x) {
   console.log(mobileQuery)
 }
 
-
-
 // preview selector based off media width
 
 function prevSelect(x) {
