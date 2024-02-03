@@ -88,6 +88,9 @@
     position: fixed;
     margin: 1vh 4vw
   }
+  .stf__parent {
+    height: 1px;
+  }
   .book-wrapper {
     height: 50%;
     width: auto;
@@ -96,13 +99,15 @@
   .book-wrapper div {
     padding: 0;
   }
+  element.style {
+    padding: 0;
+  }
   .book-wrapper .WW2018 {
-    height: 1px;
     margin-left: 12vw;
   }
   .book-wrapper .libraryBan {
-    height: 1px;
     margin-left: 23vw;
+    padding-bottom: 0;
   }
   .book-wrapper .lokoFilter {
     max-height: 90%;
