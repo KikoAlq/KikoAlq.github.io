@@ -255,6 +255,9 @@ p.potsdam-desc2 {
 .oldCoastal {
 	background-color: white;
 }
+.cowJungle {
+	max-width: 50vw;
+}
 .descText h2 {
   font-size: 2.5rem;
 	padding-top: 2vh;
